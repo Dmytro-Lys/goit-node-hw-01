@@ -22,7 +22,6 @@ export const removeContact = async (contactId) => {
     const removedItem = contacts.find(({ id }) => id === contactId)
     removedItem && await updateContacts(contacts.filter(({ id }) => id !== contactId))
     return removedItem || null
-  
 }
 
 export const addContact = async (name, email, phone) => {
