@@ -17,7 +17,7 @@ const invokeAction = async ({action, id, name, email, phone})=> {
                 const deleteContact = await contactService.removeContact(id);
                 return console.log(deleteContact);
             default:
-                console.log("Unknown action");
+                console.warn('\x1B[31m Unknown action type!');
         }
     }
     catch(error) {
